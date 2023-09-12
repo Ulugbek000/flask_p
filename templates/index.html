@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoDealer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.min.css')}}">
+    <link rel="icon" type="images/x-icon" href="img/favicon.png">
+</head>
+
+<body class="main__body">
+
+    <header>
+    <!-- Navbar -->
+    <nav>
+        <div class="header">
+           <a href="#container1" class="logotype">
+            <img src="{{url_for('static', filename='img/logo.png')}}" alt="">
+           </a>
+
+           <div class="links">
+                <a href="#about-us" class="link l1">О нас</a>
+                <a href="#service" class="link l2">Услуги</a>
+                <a href="#how-to-buy" class="link l3">Как купить</a>
+                <a href="#advantages" class="link l4">Преимущества</a>
+                <a href="#review" class="link l5">Отзывы</a>
+                <a href="#contacts" class="link l6">Контакты</a>
+                <a class="link l7">Поиск</a>
+           </div>
+
+           <div class="contacts">
+
+                <div class="sc-media">
+                    <a href="" class="sc-media__icons sc1">
+                        <img src="./img/telegram.png" alt="">
+                    </a>
+
+                    <a href="" class="sc-media__icons sc2">
+                        <img src="./img/whatsupp.png" alt="">
+                    </a>
+
+                    <a href="" class="sc-media__icons sc3">
+                        <img src="./img/youtube.png" alt="">
+                    </a>
+                </div>
+                
+                <div class="phone-numbers">
+                    <a href="" class="phone-number">+7 (8352) 67-52-52</a>
+                    <a href="" class="phone-number">+7 (927) 997-12-42</a>
+                </div>
+
+                <button class="burger-menu">
+                    <img src="../img/Hamburger Menu.png" alt="">
+                </button>
+           </div>
+
+        </div>
+    </nav>
+</header>
+    <div class="modal">
+    <div class="modal__header">
+        <a href="#container1" class="modal__logo">
+            <img src="../img/logotype.png" alt="">
+        </a>
+        <button class="modal__close"></button>
+    </div>
+    <div class="modal__body">
+        <div class="modal__links">
+            <a href="#about-us" class="modal__link">О нас</a>
+            <a href="#service" class="modal__link">Услуги</a>
+            <a href="#how-to-buy" class="modal__link">Как купить</a>
+            <a href="#advantages" class="modal__link">Преимущества</a>
+            <a href="#review" class="modal__link">Отзывы</a>
+            <a href="#contacts" class="modal__link">Контакты</a>
+            <a class="modal__link modal-search">Поиск</a>
+       </div>
+       <div class="modal__adress">
+            <a href="" class="modal__phone-number">
+                <div class="modal__phone-img">
+                    <img src="{{url_for('static', filename='img/modal-phone.png')}}" alt="">
+                </div>
+                <p class="modal__number">8 927 997 12 42</p>
+            </a>
+            <div class="modal__sc-media-icons">
+                <a href="" class="modal__sc-media-icon">
+                    <img src="../img/red__telegram.png" alt="">
+                </a>
+                <a href="" class="modal__sc-media-icon">
+                    <img src="../img/red__whatsup.png" alt="">
+                </a>
+                <a href="" class="modal__sc-media-icon">
+                    <img src="../img/red__youTube.png" alt="">
+                </a>
+            </div>
+       </div>
+    </div>
+    <div class="modal__footer">
+        <a href="" class="footer__link">Реквизиты</a>
+        <a href="" class="footer__link">Политика конфиденциальности </a>
+    </div>
+</div>
+
+
+
+<div class="search-container">
+    <div class="search-container__block">
+        <button class="search-container__x">
+            <img src="../img/x.png" alt="">
+        </button>
+        <form action="/search" class="search-form" name="s">
+            <input type="text" placeholder="Ведите название автомобиля" class="search-container__input" name="s">
+        <button type="submit" class="search-container__img">
+            <img src="../img/search-icon.png" alt="">
+        </button>
+        </form>
+    </div>
+</div>
+    
+    <div id="container1" class="container1">
+        <div class="main-container">
+            <div class="main-container__descriptions">
+                <h2 class="title container1__title">Купите автомобиль дешевле на 60%*</h2>
+                <p class="descriptions__txt description mob-hide">Привезем автомобиль под ключ со всеми документами. Подбор автомобиля под любой запрос  БЕСПЛАТНО  </p>
+                <button class="descriptions__application mob-hide application">
+                    Оставить заявку
+                </button>
+            </div>
+            <div class="main-container__img">
+                <div class="main-container__photo">
+                    <img src="./img/main__photo.png" alt="">
+                </div>
+            </div>
+            <div class="pc-hide">
+                <p class="descriptions__txt description descriptions__txt-reveal">Привезем автомобиль под ключ со всеми документами. Подбор автомобиля под любой запрос  БЕСПЛАТНО  </p>
+                <button class="descriptions__application application descriptions__application-reveal">Оставить заявку</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="service" class="container2">
+        <div class="container2__content">
+            <h2 class="content__title title">Поможем вам выгодно купить и привезти автомобиль в любую точку России</h2>
+            <p class="content__description description">Предлагаем Вам купить автомобиль дешевле и лучше, но за тот же бюджет</p>
+            <button class="content__application application mob-hide">Оставить заявку</button>
+
+            <div class="content__options">
+                <div class="options__block options__block1">
+                    <div class="container2__title-block">
+                        <div class="block__img pc-hide">
+                            <img src="./img/key.png" alt="">
+                        </div>
+                        <h2 class="block__title">С пробегом</h2>
+                    </div>
+                    <p class="block__description description">Предлагаем купить автомобиль дешевле до 60%, от рыночной цены на Авито и Авто.ру</p>
+                    <div class="block__img mob-hide">
+                        <img src="./img/key.png" alt="">
+                    </div>
+                </div>
+
+                <div class="options__block options__block2">
+                    <div class="container2__title-block">
+                        <div class="block__img car pc-hide">
+                            <img src="./img/car.png" alt="">
+                        </div>
+                        <h2 class="block__title">Новые</h2>
+                    </div>
+                    <p class="block__description description">Предлагаем купить автомобиль дешевле до 60%, от рыночной цены на Авито и Авто.ру</p>
+                    <div class="block__img car mob-hide">
+                        <img src="./img/car.png" alt="">
+                    </div>
+                </div>
+
+                <div class="options__block options__block3">
+                    <div class="container2__title-block">
+                        <div class="block__img coins__up pc-hide">
+                            <img src="./img/coins__up.png" alt="">
+                        </div>
+                        <h2 class="block__title">Под ваш бюджет</h2>
+                    </div>
+                    <p class="block__description description">Предлагаем купить автомобиль дешевле до 60%, от рыночной цены на Авито и Авто.ру</p>
+                    <div class="block__img coins__up mob-hide">
+                        <img src="./img/coins__up.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <button class="content__application application pc-hide">Оставить заявку</button>
+        </div>
+    </div>
+
+    <div id="about-us" class="container3">
+        <div class="container3__img">
+            <img src="./img/about-us.png" alt="">
+        </div>
+        <div class="container3__about-us">
+            <h2 class="about-us__title title">О нас</h2>
+            <p class="about-us__description description">Мы автосалон и официальный партнер крупнейших мировых авто-аукционов: IAA (Insurance Auto Auction), Copart, Manheim.</p>
+            <div class="about-us__block">
+                <div class="block__icon-txt">
+                    <div class="icon-txt__icon">
+                        <img src="./img/about-us-1.png" alt="">
+                    </div>
+                    <p class="icon-txt__description description">Работаем без посредников</p>
+                </div>
+                <div class="block__icon-txt">
+                    <div class="icon-txt__icon">
+                        <img src="./img/about-us-2.png" alt="">
+                    </div>
+                    <p class="icon-txt__description description">Успешный опыт 10 лет</p>
+                </div>
+                <div class="block__icon-txt">
+                    <div class="icon-txt__icon">
+                        <img src="./img/about-us-3.png" alt="">
+                    </div>
+                    <p class="icon-txt__description description"> Отлаженная логистика</p>
+                </div>
+            </div>
+            <div class="about-us__deal">
+                <div class="deal__description description">Мы берем на себя полное сопровождение сделки до передачи автомобиля в руки клиенту. </div> 
+            </div>
+            <button class="about-us__application application">Оставить заявку</button>
+        </div>
+    </div>
+
+    <div class="container4">
+        <h2 class="container4__title title">Какие авто привозим?</h2>
+        <p class="container4__description description">Привозим авто не старше 7 лет на момент растаможки.</p>
+        <div class="container4__slider-box">
+            <div class="swiper container4__slider">
+                <div class="swiper-wrapper container4__swiper-wrapper">
+                  <div class="swiper-slide container4__slide container4__slide1">
+                    <div class="slide__img">
+                        <img src="./img/slider__1st-img.png" alt="">
+                    </div>
+                    <h2 class="slide__title title">Toyota RAV4 2022</h2>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Пробег</p>
+                        <div class="slide__dashed-line dashed1"></div>
+                        <p class="slide__b-txt">5 700 км</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Объем двигателя</p>
+                        <div class="slide__dashed-line dashed2"></div>
+                        <p class="slide__b-txt">2.0</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Мощность</p>
+                        <div class="slide__dashed-line dashed3"></div>
+                        <p class="slide__b-txt">149 л.с.</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Коробка</p>
+                        <div class="slide__dashed-line dashed4"></div>
+                        <p class="slide__b-txt">Автомат</p>
+                    </div>
+                    <div class="slide__price-block">
+                        <p class="slide__price-description">Цена на вторичном<br> рынке в РФ</p>
+                        <p class="slide__price">3 300 000 ₽</p>
+                    </div>
+                    <div class="slide__price-block">
+                        <p class="slide__price-description">Цена автомобиля <br>“под ключ”</p>
+                        <p class="slide__price red-price">2 700 000 ₽</p>
+                    </div>
+                    <button class="slider__application application">Оставить заявку</button>
+                  </div>
+                  <div class="swiper-slide container4__slide container4__slide2">
+                    <div class="slide__img">
+                        <img src="./img/slider__2nd-img.png" alt="">
+                    </div>
+                    <h2 class="slide__title title">Matiz 2022</h2>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Пробег</p>
+                        <div class="slide__dashed-line dashed1"></div>
+                        <p class="slide__b-txt">5 700 км</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Объем двигателя</p>
+                        <div class="slide__dashed-line dashed2"></div>
+                        <p class="slide__b-txt">2.0</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Мощность</p>
+                        <div class="slide__dashed-line dashed3"></div>
+                        <p class="slide__b-txt">149 л.с.</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Коробка</p>
+                        <div class="slide__dashed-line dashed4"></div>
+                        <p class="slide__b-txt">Автомат</p>
+                    </div>
+                    <div class="slide__price-block">
+                        <p class="slide__price-description">Цена на вторичном<br> рынке в РФ</p>
+                        <p class="slide__price">3 250 000 ₽</p>
+                    </div>
+                    <div class="slide__price-block">
+                        <p class="slide__price-description">Цена автомобиля <br>“под ключ”</p>
+                        <p class="slide__price red-price">2 500 000 ₽</p>
+                    </div>
+                    <button class="slider__application application">Оставить заявку</button>
+                  </div>
+                  <div class="swiper-slide container4__slide container4__slide3">
+                    <div class="slide__img">
+                        <img src="./img/slider__3rd-img.png" alt="">
+                    </div>
+                    <h2 class="slide__title title">Maluba 2022</h2>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Пробег</p>
+                        <div class="slide__dashed-line dashed1"></div>
+                        <p class="slide__b-txt">5 700 км</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Объем двигателя</p>
+                        <div class="slide__dashed-line dashed2"></div>
+                        <p class="slide__b-txt">2.0</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Мощность</p>
+                        <div class="slide__dashed-line dashed3"></div>
+                        <p class="slide__b-txt">149 л.с.</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Коробка</p>
+                        <div class="slide__dashed-line dashed4"></div>
+                        <p class="slide__b-txt">Автомат</p>
+                    </div>
+                    <div class="slide__price-block">
+                        <p class="slide__price-description">Цена на вторичном<br> рынке в РФ</p>
+                        <p class="slide__price">2 900 000 ₽</p>
+                    </div>
+                    <div class="slide__price-block">
+                        <p class="slide__price-description">Цена автомобиля <br>“под ключ”</p>
+                        <p class="slide__price red-price">2 300 000 ₽</p>
+                    </div>
+                    <button class="slider__application application">Оставить заявку</button>
+                  </div>
+                  <div class="swiper-slide container4__slide">
+                    <div class="slide__img">
+                        <img src="./img/slider__2nd-img.png" alt="">
+                    </div>
+                    <h2 class="slide__title title">Equinox 2022</h2>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Пробег</p>
+                        <div class="slide__dashed-line dashed1"></div>
+                        <p class="slide__b-txt">5 700 км</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Объем двигателя</p>
+                        <div class="slide__dashed-line dashed2"></div>
+                        <p class="slide__b-txt">2.0</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Мощность</p>
+                        <div class="slide__dashed-line dashed3"></div>
+                        <p class="slide__b-txt">149 л.с.</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Коробка</p>
+                        <div class="slide__dashed-line dashed4"></div>
+                        <p class="slide__b-txt">Автомат</p>
+                    </div>
+                    <div class="slide__price-block">
+                        <p class="slide__price-description">Цена на вторичном<br> рынке в РФ</p>
+                        <p class="slide__price">3 250 000 ₽</p>
+                    </div>
+                    <div class="slide__price-block">
+                        <p class="slide__price-description">Цена автомобиля <br>“под ключ”</p>
+                        <p class="slide__price red-price">2 500 000 ₽</p>
+                    </div>
+                    <button class="slider__application application">Оставить заявку</button>
+                  </div>
+                  <div class="swiper-slide container4__slide">
+                    <div class="slide__img">
+                        <img src="./img/slider__3rd-img.png" alt="">
+                    </div>
+                    <h2 class="slide__title title">Tico 2022</h2>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Пробег</p>
+                        <div class="slide__dashed-line dashed1"></div>
+                        <p class="slide__b-txt">5 700 км</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Объем двигателя</p>
+                        <div class="slide__dashed-line dashed2"></div>
+                        <p class="slide__b-txt">2.0</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Мощность</p>
+                        <div class="slide__dashed-line dashed3"></div>
+                        <p class="slide__b-txt">149 л.с.</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Коробка</p>
+                        <div class="slide__dashed-line dashed4"></div>
+                        <p class="slide__b-txt">Автомат</p>
+                    </div>
+                    <div class="slide__price-block">
+                        <p class="slide__price-description">Цена на вторичном<br> рынке в РФ</p>
+                        <p class="slide__price">3 250 000 ₽</p>
+                    </div>
+                    <div class="slide__price-block">
+                        <p class="slide__price-description">Цена автомобиля <br>“под ключ”</p>
+                        <p class="slide__price red-price">2 500 000 ₽</p>
+                    </div>
+                    <button class="slider__application application">Оставить заявку</button>
+                  </div>
+                  <div class="swiper-slide container4__slide">
+                    <div class="slide__img">
+                        <img src="./img/slider__1st-img.png" alt="">
+                    </div>
+                    <h2 class="slide__title title">Spark 2022</h2>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Пробег</p>
+                        <div class="slide__dashed-line dashed1"></div>
+                        <p class="slide__b-txt">5 700 км</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Объем двигателя</p>
+                        <div class="slide__dashed-line dashed2"></div>
+                        <p class="slide__b-txt">2.0</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Мощность</p>
+                        <div class="slide__dashed-line dashed3"></div>
+                        <p class="slide__b-txt">149 л.с.</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Коробка</p>
+                        <div class="slide__dashed-line dashed4"></div>
+                        <p class="slide__b-txt">Автомат</p>
+                    </div>
+                    <div class="slide__price-block">
+                        <p class="slide__price-description">Цена на вторичном<br> рынке в РФ</p>
+                        <p class="slide__price">3 250 000 ₽</p>
+                    </div>
+                    <div class="slide__price-block">
+                        <p class="slide__price-description">Цена автомобиля <br>“под ключ”</p>
+                        <p class="slide__price red-price">2 500 000 ₽</p>
+                    </div>
+                    <button class="slider__application application">Оставить заявку</button>
+                  </div>
+                  <div class="swiper-slide container4__slide">
+                    <div class="slide__img">
+                        <img src="./img/slider__3rd-img.png" alt="">
+                    </div>
+                    <h2 class="slide__title title">Bmw 2022</h2>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Пробег</p>
+                        <div class="slide__dashed-line dashed1"></div>
+                        <p class="slide__b-txt">5 700 км</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Объем двигателя</p>
+                        <div class="slide__dashed-line dashed2"></div>
+                        <p class="slide__b-txt">2.0</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Мощность</p>
+                        <div class="slide__dashed-line dashed3"></div>
+                        <p class="slide__b-txt">149 л.с.</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Коробка</p>
+                        <div class="slide__dashed-line dashed4"></div>
+                        <p class="slide__b-txt">Автомат</p>
+                    </div>
+                    <div class="slide__price-block">
+                        <p class="slide__price-description">Цена на вторичном<br> рынке в РФ</p>
+                        <p class="slide__price">3 250 000 ₽</p>
+                    </div>
+                    <div class="slide__price-block">
+                        <p class="slide__price-description">Цена автомобиля <br>“под ключ”</p>
+                        <p class="slide__price red-price">2 500 000 ₽</p>
+                    </div>
+                    <button class="slider__application application">Оставить заявку</button>
+                  </div>
+                  <div class="swiper-slide container4__slide">
+                    <div class="slide__img">
+                        <img src="./img/slider__1st-img.png" alt="">
+                    </div>
+                    <h2 class="slide__title title">Audi R8 Spider 2022</h2>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Пробег</p>
+                        <div class="slide__dashed-line dashed1"></div>
+                        <p class="slide__b-txt">5 700 км</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Объем двигателя</p>
+                        <div class="slide__dashed-line dashed2"></div>
+                        <p class="slide__b-txt">2.0</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Мощность</p>
+                        <div class="slide__dashed-line dashed3"></div>
+                        <p class="slide__b-txt">149 л.с.</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Коробка</p>
+                        <div class="slide__dashed-line dashed4"></div>
+                        <p class="slide__b-txt">Автомат</p>
+                    </div>
+                    <div class="slide__price-block">
+                        <p class="slide__price-description">Цена на вторичном<br> рынке в РФ</p>
+                        <p class="slide__price">3 250 000 ₽</p>
+                    </div>
+                    <div class="slide__price-block">
+                        <p class="slide__price-description">Цена автомобиля <br>“под ключ”</p>
+                        <p class="slide__price red-price">2 500 000 ₽</p>
+                    </div>
+                    <button class="slider__application application">Оставить заявку</button>
+                  </div>
+                  <div class="swiper-slide container4__slide">
+                    <div class="slide__img">
+                        <img src="./img/slider__2nd-img.png" alt="">
+                    </div>
+                    <h2 class="slide__title title">Li-Xing 2022</h2>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Пробег</p>
+                        <div class="slide__dashed-line dashed1"></div>
+                        <p class="slide__b-txt">5 700 км</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Объем двигателя</p>
+                        <div class="slide__dashed-line dashed2"></div>
+                        <p class="slide__b-txt">2.0</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Мощность</p>
+                        <div class="slide__dashed-line dashed3"></div>
+                        <p class="slide__b-txt">149 л.с.</p>
+                    </div>
+                    <div class="slide__txt-block">
+                        <p class="slide__txt">Коробка</p>
+                        <div class="slide__dashed-line dashed4"></div>
+                        <p class="slide__b-txt">Автомат</p>
+                    </div>
+                    <div class="slide__price-block">
+                        <p class="slide__price-description">Цена на вторичном<br> рынке в РФ</p>
+                        <p class="slide__price">3 250 000 ₽</p>
+                    </div>
+                    <div class="slide__price-block">
+                        <p class="slide__price-description">Цена автомобиля <br>“под ключ”</p>
+                        <p class="slide__price red-price">2 500 000 ₽</p>
+                    </div>
+                    <button class="slider__application application">Оставить заявку</button>
+                  </div>
+                </div>
+            </div>
+                <div class="swiper-pagination container4__swiper-pagination"></div>
+              
+                <div class="swiper-button-prev container4__swiper-button-prev"></div>
+                <div class="swiper-button-next container4__swiper-button-next"></div>
+            
+        </div>
+    </div>
+
+    <div class="container5">
+        <div class="container5__inner-block">
+            <div class="container5__left-block">
+                <h2 class="container5__title title">Мы советуем подбирать автомобиль с бюджетом от <span class="red-txt">1,3 млн </span> </h2>
+                <p class="container5__description description">C учетом расходов на доставку, растаможку и наши услуги.</p>
+                <button class="container5__application application">Оставить заявку</button>
+            </div>
+            <div class="container5__right-block">
+                <div class="container5__img">
+                    <img src="./img/budjet-car.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container6">
+
+        <h2 class="container6__main-title">Обзоры привезенных авто</h2>
+
+        <div class="container6__upper-block">
+            <div class="swiper container6__swiper">
+                <div class="swiper-wrapper container6__swiper-wrapper">
+                  <div class="swiper-slide container6__swiper-slide container6__swiper-slide-main">
+                    <div class="container6__upper-content">
+                        <iframe width="932" height="524" src="https://www.youtube.com/embed/xz9H91_4m0A" title="Взял Lexus GX460 - зачем ему ограничитель?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <h2 class="container6___upper-content-description">Привезли <b>Lexus GX 460 с COPART1</b>  за <span>1 800 000 ₽</span> </h2>
+                  </div>
+                  <div class="swiper-slide container6__swiper-slide container6__swiper-slide-right">
+                    <div class="container6__upper-content">
+                        <iframe width="932" height="524" src="https://www.youtube.com/embed/VGG9BU9mab8" title="Все недостатки нового Toyota RAV4. Тест-драйв | Наши тесты" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <h2 class="container6___upper-content-description">Привезли <b>Toyota RAV4</b>  за <span>1 400 000 ₽</span> </h2>
+                  </div>
+                  <div class="swiper-slide container6__swiper-slide">
+                    <div class="container6__upper-content">
+                        <iframe width="998" height="499" src="https://www.youtube.com/embed/wx8Oz4WCBPg" title="НОВАЯ ЭЛЕКТРИЧЕСКАЯ СЕМЁРКА! Неприличная роскошь новой BMW i7 G70" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <h2 class="container6___upper-content-description">Привезли <b>BMW i7 G70</b>  за <span>18 000 000 ₽</span> </h2>
+                  </div>
+                  <div class="swiper-slide container6__swiper-slide">
+                    <div class="container6__upper-content">
+                        <iframe width="932" height="524" src="https://www.youtube.com/embed/9RJpfxCJy_E" title="650 л.с. MANSORY CULLINAN - 52 МЛН за тюнинг ROLLS-ROYCE и 1000 Нм под капотом! Тест-драйв и обзор." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <h2 class="container6___upper-content-description">Привезли <b>Rolls-Royce Cullinan</b>  за <span>78 000 000 ₽</span> </h2>
+                  </div>
+                  <div class="swiper-slide container6__swiper-slide">
+                    <div class="container6__upper-content">
+                        <iframe width="932" height="524" src="https://www.youtube.com/embed/hyKejTpfjwg" title="2020 Mansory Lamborghini Urus VENATUS - Wild SUV!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <h2 class="container6___upper-content-description">Привезли <b>Lamborghini Urus</b>  за <span>35 000 000 ₽</span> </h2>
+                  </div>
+                  <div class="swiper-slide container6__swiper-slide container6__swiper-slide-left">
+                    <div class="container6__upper-content">
+                        <iframe width="932" height="524" src="https://www.youtube.com/embed/zXHI84YfoKM" title="Lexus LS 500 2022 review | flagship Sports Luxury sedan tested | Chasing Cars" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <h2 class="container6___upper-content-description">Привезли <b>Lexus LS 500 2022</b>  за <span>2 300 000 ₽</span> </h2>
+                  </div>
+                  
+                </div>
+                <div class="swiper-pagination container6__swiper-pagination"></div>
+              
+                <div class="swiper-button-prev container6__swiper-button-prev"></div>
+                <div class="swiper-button-next container6__swiper-button-next"></div>
+              
+              </div>
+        </div>
+
+        <div class="container6__bottom-block">  
+            <div class="container6__left">
+                <div class="container6__bottom-img">
+                    <img src="./img/bmw.png" alt="">
+                </div>
+            </div>
+            <div class="container6__right">
+                <h2 class="container6__title title">Посмотрите реальные истории в нашем <span class="red-txt">Telegram-канале</span> </h2>
+                <a href="https://t.me/usmon_4554">
+                    <button class="container6__telegram-btn application">Перейти в Telegram </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="how-to-buy" class="container7">
+        <h2 class="container7__title title">Процесс покупки</h2>
+        <div class="container7__main-box">
+            <div class="container7__mini-box">
+                <div class="container7__upper-mini-box">
+                    <div class="container7__red-title-block">
+                        <h2 class="container7__red-title red-txt title">01</h2>
+                    </div>
+                    <div class="container7__mini-title-block">
+                        <h2 class="container7__mini-title">Подбор автомобиля</h2>
+                        <button class="container7__show-btn show-btn1">
+                            <img src="./img/down.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="container7__lower-mini-box mini-box1">
+                    <div class="container7__inner-mini-box">
+                        <div class="container7__left-mini-box mob-hide">
+                            <p class="container7__b-description ">Консультация</p>                        
+                        </div>
+                        <div class="container7__right-mini-box">
+                            <h2 class="container7__b-description pc-hide">Консультация</h2>
+                            <p class="container7__description description">Индивидуальный подход и консультация от опытных специалистов по всем вопросам, связанным с выбором, доставкой и стоимостью автомобиля и другими расходами.</p>
+                        </div>
+                    </div>
+                    <div class="container7__inner-mini-box">
+                        <div class="container7__left-mini-box mob-hide">
+                            <p class="container7__b-description ">Предварительный договор</p>                        
+                        </div>
+                        <div class="container7__right-mini-box">
+                            <h2 class="container7__b-description pc-hide">Предварительный договор</h2>
+                            <p class="container7__description description">Подписывается предварительный договор, на подбор автомобиля согласно вашим требованиям, на условиях: Депозитный платеж 1000$</p>
+                            <a href="" class="container7__download-link">
+                                <div class="container7__download-img">
+                                    <img src="./img/download-img.png" alt="">
+                                </div>
+                                <p>Скачать пример договора</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container7__inner-mini-box">
+                        <div class="container7__left-mini-box mob-hide">
+                            <p class="container7__b-description">Подбор автомобиля</p>                        
+                        </div>
+                        <div class="container7__right-mini-box">
+                            <h2 class="container7__b-description pc-hide">Подбор автомобиля</h2>
+                            <p class="container7__description description">Ваш персональный менеджер ведете поиск автомобиля, на площадках наших партнеров IAAI и Copart. Период поиска автомобиля в среднем занимает 2 недели </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container7__mini-box container7__mini-box2">
+                <div class="container7__upper-mini-box">
+                    <div class="container7__red-title-block">
+                        <h2 class="container7__red-title red-txt title">02</h2>
+                    </div>
+                    <div class="container7__mini-title-block">
+                        <h2 class="container7__mini-title">Покупка</h2>
+                        <button class="container7__show-btn show-btn2">
+                            <img src="./img/down.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="container7__lower-mini-box container7open mini-box2">
+                    <div class="container7__inner-mini-box">
+                        <div class="container7__left-mini-box mob-hide">
+                            <p class="container7__b-description ">Консультация</p>                        
+                        </div>
+                        <div class="container7__right-mini-box">
+                            <h2 class="container7__b-description pc-hide">Консультация</h2>
+                            <p class="container7__description description">Индивидуальный подход и консультация от опытных специалистов по всем вопросам, связанным с выбором, доставкой и стоимостью автомобиля и другими расходами.</p>
+                        </div>
+                    </div>
+                    <div class="container7__inner-mini-box">
+                        <div class="container7__left-mini-box mob-hide">
+                            <p class="container7__b-description ">Предварительный договор</p>                        
+                        </div>
+                        <div class="container7__right-mini-box">
+                            <h2 class="container7__b-description pc-hide">Предварительный договор</h2>
+                            <p class="container7__description description">Подписывается предварительный договор, на подбор автомобиля согласно вашим требованиям, на условиях: Депозитный платеж 1000$</p>
+                            <a href="" class="container7__download-link">
+                                <div class="container7__download-img">
+                                    <img src="./img/download-img.png" alt="">
+                                </div>
+                                <p>Скачать пример договора</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container7__inner-mini-box">
+                        <div class="container7__left-mini-box mob-hide">
+                            <p class="container7__b-description">Подбор автомобиля</p>                        
+                        </div>
+                        <div class="container7__right-mini-box">
+                            <h2 class="container7__b-description">Подбор автомобиля</h2>
+                            <p class="container7__description description">Ваш персональный менеджер ведете поиск автомобиля, на площадках наших партнеров IAAI и Copart. Период поиска автомобиля в среднем занимает 2 недели </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container7__mini-box container7__mini-box3">
+                <div class="container7__upper-mini-box">
+                    <div class="container7__red-title-block">
+                        <h2 class="container7__red-title red-txt title">03</h2>
+                    </div>
+                    <div class="container7__mini-title-block">
+                        <h2 class="container7__mini-title">Доставка в ваш город</h2>
+                        <button class="container7__show-btn show-btn3">
+                            <img src="./img/down.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="container7__lower-mini-box mini-box3">
+                    <div class="container7__inner-mini-box">
+                        <div class="container7__left-mini-box mob-hide">
+                            <p class="container7__b-description ">Консультация</p>                        
+                        </div>
+                        <div class="container7__right-mini-box">
+                            <h2 class="container7__b-description pc-hide">Консультация</h2>
+                            <p class="container7__description description">Индивидуальный подход и консультация от опытных специалистов по всем вопросам, связанным с выбором, доставкой и стоимостью автомобиля и другими расходами.</p>
+                        </div>
+                    </div>
+                    <div class="container7__inner-mini-box">
+                        <div class="container7__left-mini-box mob-hide">
+                            <p class="container7__b-description ">Предварительный договор</p>                        
+                        </div>
+                        <div class="container7__right-mini-box">
+                            <h2 class="container7__b-description pc-hide">Предварительный договор</h2>
+                            <p class="container7__description description">Подписывается предварительный договор, на подбор автомобиля согласно вашим требованиям, на условиях: Депозитный платеж 1000$</p>
+                            <a href="" class="container7__download-link">
+                                <div class="container7__download-img">
+                                    <img src="./img/download-img.png" alt="">
+                                </div>
+                                <p>Скачать пример договора</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container7__inner-mini-box">
+                        <div class="container7__left-mini-box mob-hide">
+                            <p class="container7__b-description">Подбор автомобиля</p>                        
+                        </div>
+                        <div class="container7__right-mini-box">
+                            <h2 class="container7__b-description pc-hide">Подбор автомобиля</h2>
+                            <p class="container7__description description">Ваш персональный менеджер ведете поиск автомобиля, на площадках наших партнеров IAAI и Copart. Период поиска автомобиля в среднем занимает 2 недели </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container8">
+        <h2 class="container8__title title">Наши гарантии</h2>
+        <div class="container8__upper-box-container">
+            <div class="container8__upper-box">
+                <div class="container8__upper-box-img">
+                    <img src="./img/container8__1-img.png" alt="">
+                </div>
+                <p class="container8__upper-box-description">100% возврат предоплаты</p>
+            </div>
+            <div class="container8__upper-box">
+                <div class="container8__upper-box-img">
+                    <img src="./img/container8__2-img.png" alt="">
+                </div>
+                <p class="container8__upper-box-description">Работаем 
+                    по договору</p>
+            </div>
+            <div class="container8__upper-box">
+                <div class="container8__upper-box-img x3">
+                    <img src="./img/container8__3-img.png" alt="">
+                </div>
+                <p class="container8__upper-box-description">Договор без мелкого шрифта</p>
+            </div>
+            <div class="container8__upper-box">
+                <div class="container8__upper-box-img container8__upper-box-img_wider">
+                    <img src="./img/container8__4-img.png" alt="">
+                </div>
+                <p class="container8__upper-box-description">Оплата в кассу нашего автосалона или на р/с компании</p>
+            </div>
+            <div class="container8__upper-box">
+                <div class="container8__upper-box-img">
+                    <img src="./img/container8__5-img.png" alt="">
+                </div>
+                <p class="container8__upper-box-description">Качество автомобиля</p>
+            </div>
+            <div class="container8__upper-box">
+                <div class="container8__upper-box-img container8__upper-box-img_wider">
+                    <img src="./img/container8__6-img.png" alt="">
+                </div>
+                <p class="container8__upper-box-description">На всех этапах сделки - автомобили застрахованы</p>
+            </div>
+        </div>
+        <div id="advantages" class="container8__upper-box-container_bottom">
+            <p class="container8__upper-box-container_bottom-txt">Вы можете убедиться в прозрачности сделки скачав предварительный договор</p>
+            <a href="" class="container8__download-link">
+                <div class="container8__download-img">
+                    <img src="./img/download-img.png" alt="">
+                </div>
+                <p>Скачать пример договора</p>
+            </a>
+        </div>
+
+        <h2 class="container8__title title">Преимущества авто из США</h2>
+        <div class="container8__lower-box-container">
+            <div class="container8__lower-box container8__lower-box1">
+                <h2 class="container8__lower-box-title">Высокое качество</h2>
+                <p class="container8__lower-box-description">Одним из главных аргументов в пользу выбора автомобиля из США, является то, что все местные машины обладают высоким качеством сборкии оснащенности. А так же высоким качеством лакокрасочного покрытия.</p>
+            </div>
+            <div class="container8__lower-box container8__lower-box2">
+                <h2 class="container8__lower-box-title">Богатая комплектация</h2>
+                <p class="container8__lower-box-description">Автомобили из США отличаются богатыми комплектациями, а также отменным техническим состоянием всех узлов и агрегатов.</p>
+            </div>
+            <div class="container8__lower-box container8__lower-box3">
+                <h2 class="container8__lower-box-title">Низкая цена</h2>
+                <p class="container8__lower-box-description">Стоимость поддержанного автомобиля из США значительно дешевле автомобиля на российском рынке даже с учетом расходов на растаможивание и доставку.</p>
+            </div>
+            <div class="container8__lower-box container8__lower-box4">
+                <h2 class="container8__lower-box-title">Отличное состояние</h2>
+                <p class="container8__lower-box-description">Состояние подержанных автомобилей идеальное. В США отличные условия эксплуатации транспорта, хорошие дороги и отменный сервис.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container9">
+        <h2 class="container9__title title">Сравните цены</h2>
+        <p class="container9__description">Привезенные нами автомобили значительно дешевле рыночной цены в России</p>
+        <div class="container9__upper-block">
+            <div class="swiper container9__swiper">
+                <div class="swiper-wrapper container9__swiper-wrapper">
+                  <div class="swiper-slide container9__swiper-slide">
+                    <div class="container9__slide-left-content">
+                        <h2 class="container9__upper-block-title">Наша цена</h2>
+                        <div class="container9__slide-left-content-box">
+                            <div class="container9__upper-left-photo">
+                                <img src="./img/slider__1st-img.png" alt="">
+                            </div>
+                            <h2 class="container9__content-title">Toyota RAV4 2022</h2>
+                            <div class="container9__slide__txt-block">
+                                <p class="container9__slide__txt">Пробег</p>
+                                <div class="container9__slide__dashed-line dashed11"></div>
+                                <p class="container9__slide__b-txt">5 700 км</p>
+                            </div>
+                            <div class="container9__slide__txt-block">
+                                <p class="container9__slide__txt">Объем двигателя</p>
+                                <div class="container9__slide__dashed-line dashed22"></div>
+                                <p class="container9__slide__b-txt">2.0</p>
+                            </div>
+                            <div class="container9__slide__txt-block">
+                                <p class="container9__slide__txt">Мощность</p>
+                                <div class="container9__slide__dashed-line dashed33"></div>
+                                <p class="container9__slide__b-txt">149 л.с.</p>
+                            </div>
+                            <div class="container9__slide__txt-block">
+                                <p class="container9__slide__txt">Коробка</p>
+                                <div class="container9__slide__dashed-line dashed44"></div>
+                                <p class="container9__slide__b-txt">Автомат</p>
+                            </div>
+                            <div class="container9__slide__price-block">
+                                <p class="container9__slide__price-description">Цена на вторичном<br> рынке в РФ</p>
+                                <p class="slide__price">3 300 000 ₽</p>
+                            </div>
+                            <div class="container9__slide__price-block">
+                                <p class="container9__slide__price-description">Цена автомобиля <br>“под ключ”</p>
+                                <p class="container9__slide__price red-price">2 700 000 ₽</p>
+                            </div>
+                        </div>
+                    </div>
+
+                        <h2 class="container9__upper-middle-title">VS</h2>
+
+                    <div class="container9__right-content">
+                        <h2 class="container9__upper-block-title"> Авито.ру </h2>
+                        <div class="container9__slide-right-content-box">
+                            <div class="container9__upper-right-photo">
+                                <img src="./img/slider__1st-img.png" alt="">
+                            </div>
+                            <h2 class="container9__content-title">Toyota RAV4 2022</h2>
+                            
+                            <div class="container9__slide__txt-block">
+                                <p class="container9__slide__txt">Мощность</p>
+                                <div class="container9__slide__dashed-line dashed333"></div>
+                                <p class="container9__slide__b-txt">149 л.с.</p>
+                            </div>
+                            <div class="container9__slide__txt-block">
+                                <p class="container9__slide__txt">Коробка</p>
+                                <div class="container9__slide__dashed-line dashed444"></div>
+                                <p class="container9__slide__b-txt">Автомат</p>
+                            </div>
+                            <div class="container9__slide__price-block">
+                                <p class="container9__slide__price-description">Цена автомобиля <br>на авито</p>
+                                <p class="container9__slide__price red-price">3 100 000 ₽</p>
+                            </div>
+                        </div>
+                    </div>
+                        
+                  </div>
+                  <div class="swiper-slide container9__swiper-slide">
+                    <div class="container9__slide-left-content">
+                        <h2 class="container9__upper-block-title">Наша цена</h2>
+                        <div class="container9__slide-left-content-box">
+                            <div class="container9__upper-left-photo">
+                                <img src="./img/slider__2nd-img.png" alt="">
+                            </div>
+                            <h2 class="container9__content-title">Toyota RAV4 2022</h2>
+                            <div class="container9__slide__txt-block">
+                                <p class="container9__slide__txt">Пробег</p>
+                                <div class="container9__slide__dashed-line dashed11"></div>
+                                <p class="container9__slide__b-txt">5 700 км</p>
+                            </div>
+                            <div class="container9__slide__txt-block">
+                                <p class="container9__slide__txt">Объем двигателя</p>
+                                <div class="container9__slide__dashed-line dashed22"></div>
+                                <p class="container9__slide__b-txt">2.0</p>
+                            </div>
+                            <div class="container9__slide__txt-block">
+                                <p class="container9__slide__txt">Мощность</p>
+                                <div class="container9__slide__dashed-line dashed33"></div>
+                                <p class="container9__slide__b-txt">149 л.с.</p>
+                            </div>
+                            <div class="container9__slide__txt-block">
+                                <p class="container9__slide__txt">Коробка</p>
+                                <div class="container9__slide__dashed-line dashed44"></div>
+                                <p class="container9__slide__b-txt">Автомат</p>
+                            </div>
+                            <div class="container9__slide__price-block">
+                                <p class="container9__slide__price-description">Цена на вторичном<br> рынке в РФ</p>
+                                <p class="slide__price">3 300 000 ₽</p>
+                            </div>
+                            <div class="container9__slide__price-block">
+                                <p class="container9__slide__price-description">Цена автомобиля <br>“под ключ”</p>
+                                <p class="container9__slide__price red-price">2 700 000 ₽</p>
+                            </div>
+                        </div>
+                    </div>
+
+                        <h2 class="container9__upper-middle-title">VS</h2>
+
+                    <div class="container9__right-content">
+                        <h2 class="container9__upper-block-title"> Авито.ру </h2>
+                        <div class="container9__slide-right-content-box">
+                            <div class="container9__upper-right-photo">
+                                <img src="./img/slider__2nd-img.png" alt="">
+                            </div>
+                            <h2 class="container9__content-title">Toyota RAV4 2022</h2>
+                            
+                            <div class="container9__slide__txt-block">
+                                <p class="container9__slide__txt">Мощность</p>
+                                <div class="container9__slide__dashed-line dashed333"></div>
+                                <p class="container9__slide__b-txt">149 л.с.</p>
+                            </div>
+                            <div class="container9__slide__txt-block">
+                                <p class="container9__slide__txt">Коробка</p>
+                                <div class="container9__slide__dashed-line dashed444"></div>
+                                <p class="container9__slide__b-txt">Автомат</p>
+                            </div>
+                            <div class="container9__slide__price-block">
+                                <p class="container9__slide__price-description">Цена автомобиля <br>на авито</p>
+                                <p class="container9__slide__price red-price">3 100 000 ₽</p>
+                            </div>
+                        </div>
+                    </div>
+                        
+                </div>
+                  <div class="swiper-slide container9__swiper-slide">
+                    <div class="container9__slide-left-content">
+                        <h2 class="container9__upper-block-title">Наша цена</h2>
+                        <div class="container9__slide-left-content-box">
+                            <div class="container9__upper-left-photo">
+                                <img src="./img/slider__3rd-img.png" alt="">
+                            </div>
+                            <h2 class="container9__content-title">Toyota RAV4 2022</h2>
+                            <div class="container9__slide__txt-block">
+                                <p class="container9__slide__txt">Пробег</p>
+                                <div class="container9__slide__dashed-line dashed11"></div>
+                                <p class="container9__slide__b-txt">5 700 км</p>
+                            </div>
+                            <div class="container9__slide__txt-block">
+                                <p class="container9__slide__txt">Объем двигателя</p>
+                                <div class="container9__slide__dashed-line dashed22"></div>
+                                <p class="container9__slide__b-txt">2.0</p>
+                            </div>
+                            <div class="container9__slide__txt-block">
+                                <p class="container9__slide__txt">Мощность</p>
+                                <div class="container9__slide__dashed-line dashed33"></div>
+                                <p class="container9__slide__b-txt">149 л.с.</p>
+                            </div>
+                            <div class="container9__slide__txt-block">
+                                <p class="container9__slide__txt">Коробка</p>
+                                <div class="container9__slide__dashed-line dashed44"></div>
+                                <p class="container9__slide__b-txt">Автомат</p>
+                            </div>
+                            <div class="container9__slide__price-block">
+                                <p class="container9__slide__price-description">Цена на вторичном<br> рынке в РФ</p>
+                                <p class="slide__price">3 300 000 ₽</p>
+                            </div>
+                            <div class="container9__slide__price-block">
+                                <p class="container9__slide__price-description">Цена автомобиля <br>“под ключ”</p>
+                                <p class="container9__slide__price red-price">2 700 000 ₽</p>
+                            </div>
+                        </div>
+                    </div>
+
+                        <h2 class="container9__upper-middle-title">VS</h2>
+
+                    <div class="container9__right-content">
+                        <h2 class="container9__upper-block-title"> Авито.ру </h2>
+                        <div class="container9__slide-right-content-box">
+                            <div class="container9__upper-right-photo">
+                                <img src="./img/slider__3rd-img.png" alt="">
+                            </div>
+                            <h2 class="container9__content-title">Toyota RAV4 2022</h2>
+                            
+                            <div class="container9__slide__txt-block">
+                                <p class="container9__slide__txt">Мощность</p>
+                                <div class="container9__slide__dashed-line dashed333"></div>
+                                <p class="container9__slide__b-txt">149 л.с.</p>
+                            </div>
+                            <div class="container9__slide__txt-block">
+                                <p class="container9__slide__txt">Коробка</p>
+                                <div class="container9__slide__dashed-line dashed444"></div>
+                                <p class="container9__slide__b-txt">Автомат</p>
+                            </div>
+                            <div class="container9__slide__price-block">
+                                <p class="container9__slide__price-description">Цена автомобиля <br>на авито</p>
+                                <p class="container9__slide__price red-price">3 100 000 ₽</p>
+                            </div>
+                        </div>
+                    </div>
+                        
+                  </div>
+                </div>
+                <div class="swiper-pagination container9__swiper-pagination"></div>
+            </div>
+
+                
+                <div class="swiper-button-prev container9__swiper-button-prev"></div>
+                <div class="swiper-button-next container9__swiper-button-next"></div>
+
+
+
+            <button class="container9__application application">Оставить заявку</button>
+        </div>
+        <div class="container9__bottom-block">
+            <div class="container9__bottom-kid-block">
+                <h2 class="container9__bottom-title">Оснащение автомобиля в США</h2>
+                <p class="container9__bottom-description">Производители обязаны оснащать автомобили базовыми системам безопасности: </p>
+                <div class="container9__bottom-mini-block">
+                    <div class="container9__icon">
+                        <img src="./img/road-icon1.png" alt="">
+                    </div>
+                    <p class="container9__bottom-icon-txt">12 подушек безопасности</p>
+                </div>
+                <div class="container9__bottom-mini-block">
+                    <div class="container9__icon">
+                        <img src="./img/road-icon2.png" alt="">
+                    </div>
+                    <p class="container9__bottom-icon-txt">Адаптивный круз-контроль</p>
+                </div>
+                <div class="container9__bottom-mini-block">
+                    <div class="container9__icon">
+                        <img src="./img/road-icon3.png" alt="">
+                    </div>
+                    <p class="container9__bottom-icon-txt">Удержание в полосе</p>
+                </div>
+            </div>
+            <div class="container9__bottom-kid-block">
+                <h2 class="container9__bottom-title">Долговечные комплектующие</h2>
+                <p class="container9__bottom-description">Срок службы авто в США  </p>
+                <p class="container9__bottom-red-txt">480 000 км</p>
+                <p class="container9__bottom-description">Срок службы авто в России</p>
+                <p class="container9__bottom-b-txt">300 000 км</p>
+                <button class="container9__bottom-application application">Оставить заявку</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container10">
+        <div class="container10__inner">
+            <div class="container10__descriptions-block">
+                <div class="container10__descriptions-left">
+                    <h2 class="container10__title title">Более 200 автомобилей привезено за 2022</h2>
+                    <p class="container10__left-description description">Проверяем всю историю обслуживания, владения и ДТП с помощью платных сервисов, созданных для профессиональных продавцов автомобилей.</p>
+                </div>
+                <div class="container10__description-right">
+                    <div class="container10__right-description-block">
+                        <p>Мы помогли сэкономить клиентам около <br class="br"> <span>240 000 000 ₽</span> </p>
+                    </div>
+                </div>
+            </div>
+            <button class="container10__application application">Оставить заявку</button>
+            
+            <div class="container10__slider-box">
+                <div class="swiper container10__slider">
+                    <div class="swiper-wrapper container10__swiper-wrapper">
+                      <div class="swiper-slide container10__slide">
+                        <div class="container10__slide-img">
+                            <img src="./img/car-1.png" alt="">
+                        </div>
+                      </div> 
+                      <div class="swiper-slide container10__slide">
+                        <div class="container10__slide-img">
+                            <img src="./img/car-2.png" alt="">
+                        </div>
+                      </div>
+                      <div class="swiper-slide container10__slide">
+                        <div class="container10__slide-img">
+                            <img src="./img/car-3.png" alt="">
+                        </div>
+                      </div>
+                      <div class="swiper-slide container10__slide">
+                        <div class="container10__slide-img">
+                            <img src="./img/car-1.png" alt="">
+                        </div>
+                      </div>
+                      <div class="swiper-slide container10__slide">
+                        <div class="container10__slide-img">
+                            <img src="./img/car-2.png" alt="">
+                        </div>
+                      </div>
+                      <div class="swiper-slide container10__slide">
+                        <div class="container10__slide-img">
+                            <img src="./img/car-3.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                        <div class="swiper-pagination container10__swiper-pagination"></div>
+                </div>
+
+
+                    <div class="swiper-button-prev container10__swiper-button-prev"></div>
+                    <div class="swiper-button-next container10__swiper-button-next"></div>
+                  
+            </div>
+        </div>
+    </div>
+
+    <div class="container11">
+        <div class="container11__inner">
+            <h2 class="container11__title">Наша команда</h2>
+            <p class="container11__description">Опытные менеджеры поддерживают наших клиентов  </p>
+            <div class="container11__team-block">
+                <div class="container11__team-member-box member1">
+                    <div class="mob-hide">
+                        <h2 class="container11__team-member-name">Михаил Погосян</h2>
+                        <p class="contaienr11__team-member-position">Руководитель отдела</p>
+                        <p class="container11__team-member-number">+7 (927) 666-52-97</p>
+                        <div class="container11__team-member-contacts">
+                            <a href=""                              class="container11__team-member-contact">
+                                <img src="./img/telegram.png" alt=""> 
+                            </a>
+                            <a href=""      class="container11__team-member-contact">
+                                <img src="./img/whatsupp.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                        <div class="container11__pc-hide pc-hide">
+                            <div class="container11__pc-hide-img">
+                                <img src="./img/team-member-1.png" alt="">
+                            </div>
+                            <div class="container11__pc-hide-bottom">
+                                <h2 class="container11__team-member-name">Михаил Погосян</h2>
+                        <p class="contaienr11__team-member-position">Руководитель отдела</p>
+                        <p class="container11__team-member-number">+7 (927) 666-52-97</p>
+                        <div class="container11__team-member-contacts">
+                            <a href=""                              class="container11__team-member-contact">
+                                <img src="./img/telegram.png" alt=""> 
+                            </a>
+                            <a href=""      class="container11__team-member-contact">
+                                <img src="./img/whatsupp.png" alt="">
+                            </a>
+                        </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="container11__team-member-box member2">
+                    <div class="mob-hide">
+                        <h2 class="container11__team-member-name">Тимур Павлов</h2>
+                    <p class="contaienr11__team-member-position">Главный менеджер</p>
+                    <p class="container11__team-member-number">+7 (927) 666-52-97</p>
+                    <div class="container11__team-member-contacts">
+                        <a href="" class="container11__team-member-contact">
+                            <img src="./img/telegram.png" alt="">
+                        </a>
+                        <a href="" class="container11__team-member-contact">
+                            <img src="./img/whatsupp.png" alt="">
+                        </a>
+                    </div>
+                    </div>
+                    <div class="container11__pc-hide pc-hide">
+                        <div class="container11__pc-hide-img">
+                            <img src="./img/team-member-2.png" alt="">
+                        </div>
+                        <div class="container11__pc-hide-bottom">
+                            <h2 class="container11__team-member-name">Тимур Павлов</h2>
+                    <p class="contaienr11__team-member-position">Главный менеджер</p>
+                    <p class="container11__team-member-number">+7 (927) 666-52-97</p>
+                    <div class="container11__team-member-contacts">
+                        <a href="" class="container11__team-member-contact">
+                            <img src="./img/telegram.png" alt="">
+                        </a>
+                        <a href="" class="container11__team-member-contact">
+                            <img src="./img/whatsupp.png" alt="">
+                        </a>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container11__team-member-box member3">
+                    <div class="mob-hide">
+                        <h2 class="container11__team-member-name">Арам Ароян</h2>
+                    <p class="contaienr11__team-member-position">Менеджер</p>
+                    <p class="container11__team-member-number">+7 (927) 666-52-97</p>
+                    <div class="container11__team-member-contacts">
+                        <a href="" class="container11__team-member-contact">
+                            <img src="./img/telegram.png" alt="">
+                        </a>
+                        <a href="" class="container11__team-member-contact">
+                            <img src="./img/whatsupp.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                    <div class="container11__pc-hide pc-hide">
+                        <div class="container11__pc-hide-img">
+                            <img src="./img/team-member-3.png" alt="">
+                        </div>
+                        <div class="container11__pc-hide-bottom">
+                            <h2 class="container11__team-member-name">Арам Ароян</h2>
+                    <p class="contaienr11__team-member-position">Менеджер</p>
+                    <p class="container11__team-member-number">+7 (927) 666-52-97</p>
+                    <div class="container11__team-member-contacts">
+                        <a href="" class="container11__team-member-contact">
+                            <img src="./img/telegram.png" alt="">
+                        </a>
+                        <a href="" class="container11__team-member-contact">
+                            <img src="./img/whatsupp.png" alt="">
+                        </a>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container11__team-member-box member4">
+                    <div class="mob-hide">
+                        <h2 class="container11__team-member-name">Денис Николаев</h2>
+                    <p class="contaienr11__team-member-position">Менеджер</p>
+                    <p class="container11__team-member-number">+7 (927) 666-52-97</p>
+                    <div class="container11__team-member-contacts">
+                        <a href="" class="container11__team-member-contact">
+                            <img src="./img/telegram.png" alt="">
+                        </a>
+                        <a href="" class="container11__team-member-contact">
+                            <img src="./img/whatsupp.png" alt="">
+                        </a>
+                    </div>
+                    </div>
+                    <div class="container11__pc-hide pc-hide">
+                        <div class="container11__pc-hide-img">
+                            <img src="./img/team-member-4.png" alt="">
+                        </div>
+                        <div class="container11__pc-hide-bottom">
+                            <h2 class="container11__team-member-name">Денис Николаев</h2>
+                    <p class="contaienr11__team-member-position">Менеджер</p>
+                    <p class="container11__team-member-number">+7 (927) 666-52-97</p>
+                    <div class="container11__team-member-contacts">
+                        <a href="" class="container11__team-member-contact">
+                            <img src="./img/telegram.png" alt="">
+                        </a>
+                        <a href="" class="container11__team-member-contact">
+                            <img src="./img/whatsupp.png" alt="">
+                        </a>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container11__team-member-box member5">
+                    <div class="mob-hide">
+                        <h2 class="container11__team-member-name">Алексей Кузнецов</h2>
+                    <p class="contaienr11__team-member-position">Менеджер</p>
+                    <p class="container11__team-member-number">+7 (927) 666-52-97</p>
+                    <div class="container11__team-member-contacts">
+                        <a href="" class="container11__team-member-contact">
+                            <img src="./img/telegram.png" alt="">
+                        </a>
+                        <a href="" class="container11__team-member-contact">
+                            <img src="./img/whatsupp.png" alt="">
+                        </a>
+                    </div>
+                    </div>
+                    <div class="container11__pc-hide pc-hide">
+                        <div class="container11__pc-hide-img">
+                            <img src="./img/team-member-5.png" alt="">
+                        </div>
+                        <div class="container11__pc-hide-bottom">
+                            <h2 class="container11__team-member-name">Алексей Кузнецов</h2>
+                    <p class="contaienr11__team-member-position">Менеджер</p>
+                    <p class="container11__team-member-number">+7 (927) 666-52-97</p>
+                    <div class="container11__team-member-contacts">
+                        <a href="" class="container11__team-member-contact">
+                            <img src="./img/telegram.png" alt="">
+                        </a>
+                        <a href="" class="container11__team-member-contact">
+                            <img src="./img/whatsupp.png" alt="">
+                        </a>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container11__team-member-box member6">
+                   <div class="mob-hide">
+                    <h2 class="container11__team-member-name">Андрей Шахназарян</h2>
+                    <p class="contaienr11__team-member-position">Менеджер</p>
+                    <p class="container11__team-member-number">+7 (927) 666-52-97</p>
+                    <div class="container11__team-member-contacts">
+                        <a href="" class="container11__team-member-contact">
+                            <img src="./img/telegram.png" alt="">
+                        </a>
+                        <a href="" class="container11__team-member-contact">
+                            <img src="./img/whatsupp.png" alt="">
+                        </a>
+                    </div>
+                   </div>
+                   <div class="container11__pc-hide pc-hide">
+                        <div class="container11__pc-hide-img">
+                            <img src="./img/team-member-6.png" alt="">
+                        </div>
+                        <div class="container11__pc-hide-bottom">
+                            <h2 class="container11__team-member-name">Андрей Шахназарян</h2>
+                            <p class="contaienr11__team-member-position">Менеджер</p>
+                            <p class="container11__team-member-number">+7 (927) 666-52-97</p>
+                            <div class="container11__team-member-contacts">
+                                <a href="" class="container11__team-member-contact">
+                                    <img src="./img/telegram.png" alt="">
+                                </a>
+                                <a href="" class="container11__team-member-contact">
+                                    <img src="./img/whatsupp.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+       <h2 id="review" class="container11__title container11__slider-title">Отзывы клиентов</h2>
+       <div class="container11__slider-block">
+        <div class="swiper container11__swiper">
+            <div class="swiper-wrapper container11__swiper-wrapper">
+              <div class="swiper-slide container11__swiper-slide">
+                <div class="container11__slide-content">
+                    <iframe width="932" height="524" src="https://www.youtube.com/embed/9znYAVlQnLY" title="Взял Lexus GX460 в рестайлинге - вновь лучше Прадо! Лексус Г Икс 460 2021 / 2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <h2 class="container11__content-description">Привезли <b>Lexus GX 460 с COPART1</b>  за <span>1 800 000 ₽ </span> </h2>
+              </div>
+              <div class="swiper-slide container11__swiper-slide">
+                <div class="container11__slide-content">
+                    <iframe width="932" height="524" src="https://www.youtube.com/embed/ipduS7QRYi0" title="ТОПОВАЯ TOYOTA RAV4 2020 КОМПЛЕКТАЦИЯ ПРЕСТИЖ SAFETY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <h2 class="container11__content-description">Привезли <b>Toyota RAV4 2020</b>  за <span>1 800 000 ₽ </span> </h2>
+              </div>
+              <div class="swiper-slide container11__swiper-slide">
+                <div class="container11__slide-content">
+                    <iframe width="932" height="524" src="https://www.youtube.com/embed/5NCR_wWWE2Q" title="2022 BMW M5 CS - Sound, Interior and Exterior in detail" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <h2 class="container11__content-description">Привезли <b>2022 BMW M5 CS</b>  за <span>28 000 000 ₽ </span> </h2>
+              </div>
+              <div class="swiper-slide container11__swiper-slide">
+                <div class="container11__slide-content">
+                    <iframe width="932" height="524" src="https://www.youtube.com/embed/9u2UhbJpOig" title="Режим езды краба и 1100л.с.BYD Yangwang U8 2023/Характеристики/Цена/" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <h2 class="container11__content-description">Привезли <b>BYD Yangwang U8 2023</b>  за <span>35 000 000 ₽ </span> </h2>
+              </div>
+              <div class="swiper-slide container11__swiper-slide">
+                <div class="container11__slide-content">
+                    <iframe width="932" height="524" src="https://www.youtube.com/embed/kI_0E5uiqEM" title="McLaren 765 LT 2022 года - Дикий спортивный автомобиль!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <h2 class="container11__content-description">Привезли <b>McLaren 765 LT 2022</b>  за <span> 43 000 000 ₽ </span> </h2>
+              </div>
+              <div class="swiper-slide container11__swiper-slide">
+                <div class="container11__slide-content">
+                    <iframe width="932" height="524" src="https://www.youtube.com/embed/yEo6pw1l-3k" title="Lexus ES 300h Luxury Hybrid 2021- ₹62 lakh | Real-life review" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <h2 class="container11__content-description">Привезли <b>Lexus ES 300h Hybrid</b>  за <span>3 500 000 ₽ </span> </h2>
+              </div>
+              
+            </div>
+
+            <div class="swiper-pagination container11__swiper-pagination"></div>
+          
+            <div class="swiper-button-prev container11__swiper-button-prev"></div>
+            <div class="swiper-button-next container11__swiper-button-next"></div>
+          
+          </div>
+       </div>
+    </div>
+
+    <div class="container12">
+        <div class="container12__inner">
+        <h2 class="container12__title title">Часто задаваемые вопросы</h2>
+        <div class="container12__content-block container12__1st-block">
+            <div class="container12__content-upper-block">
+                <p class="container12__upper-block-txt">Какие способы оплаты у  вас? </p>
+                <button class="container12__btn">
+                    <div class="">
+                        <div class="container12__btn-plus1"></div>
+                        <div class="container12__btn-plus2"></div>
+                    </div>     
+                </button>
+            </div>
+            <div class="container12__content-lower-block">
+                <p class="container12__lower-block-txt">Да, при покупке автомобиля с повреждениями, мы подберем для него запчасти.</p>
+            </div>
+        </div>
+        <div class="container12__content-block">
+            <div class="container12__content-upper-block">
+                <p class="container12__upper-block-txt">Какие автомобили вы доставляете?</p>
+                <button class="container12__btn">
+                    <div class="">
+                        <div class="container12__btn-plus1"></div>
+                        <div class="container12__btn-plus2"></div>
+                    </div>     
+                </button>
+            </div>
+            <div class="container12__content-lower-block">
+                <p class="container12__lower-block-txt">Да, при покупке автомобиля с повреждениями, мы подберем для него запчасти.</p>
+            </div>
+        </div>
+        <div class="container12__content-block">
+            <div class="container12__content-upper-block">
+                <p class="container12__upper-block-txt">Могу ли я купить через вас запчасти? </p>
+                <button class="container12__btn">
+                    <div class="">
+                        <div class="container12__btn-plus1"></div>
+                        <div class="container12__btn-plus2"></div>
+                    </div>     
+                </button>
+            </div>
+            <div class="container12__content-lower-block">
+                <p class="container12__lower-block-txt">Да, при покупке автомобиля с повреждениями, мы подберем для него запчасти.</p>
+            </div>
+        </div>
+        <div class="container12__content-block">
+            <div class="container12__content-upper-block">
+                <p class="container12__upper-block-txt">Какие гарантии, что во время доставки с автомобилем ничего не произойдет? </p>
+                <button class="container12__btn">
+                    <div class="">
+                        <div class="container12__btn-plus1"></div>
+                        <div class="container12__btn-plus2"></div>
+                    </div>     
+                </button>
+            </div>
+            <div class="container12__content-lower-block">
+                <p class="container12__lower-block-txt">Да, при покупке автомобиля с повреждениями, мы подберем для него запчасти.</p>
+            </div>
+        </div>
+        <div class="container12__content-block">
+            <div class="container12__content-upper-block">
+                <p class="container12__upper-block-txt">Какие документы я получу в комплекте с автомобилем?</p>
+                <button class="container12__btn">
+                    <div class="">
+                        <div class="container12__btn-plus1"></div>
+                        <div class="container12__btn-plus2"></div>
+                    </div>     
+                </button>
+            </div>
+            <div class="container12__content-lower-block">
+                <p class="container12__lower-block-txt">Да, при покупке автомобиля с повреждениями, мы подберем для него запчасти.</p>
+            </div>
+        </div>
+        <div class="container12__content-block">
+            <div class="container12__content-upper-block">
+                <p class="container12__upper-block-txt">В какие города России вы осуществляете доставку автомобиля?</p>
+                <button class="container12__btn">
+                    <div class="">
+                        <div class="container12__btn-plus1"></div>
+                        <div class="container12__btn-plus2"></div>
+                    </div>     
+                </button>
+            </div>
+            <div class="container12__content-lower-block">
+                <p class="container12__lower-block-txt">Да, при покупке автомобиля с повреждениями, мы подберем для него запчасти.</p>
+            </div>
+        </div>
+        <div class="container12__content-block">
+            <div class="container12__content-upper-block">
+                <p class="container12__upper-block-txt">Какие сроки доставки автомобиля? </p>
+                <button class="container12__btn">
+                    <div class="">
+                        <div class="container12__btn-plus1"></div>
+                        <div class="container12__btn-plus2"></div>
+                    </div>     
+                </button>
+            </div>
+            <div class="container12__content-lower-block">
+                <p class="container12__lower-block-txt">Да, при покупке автомобиля с повреждениями, мы подберем для него запчасти.</p>
+            </div>
+        </div>
+        <div class="container12__content-block">
+            <div class="container12__content-upper-block">
+                <p class="container12__upper-block-txt">Можно ли вернуть автомобиль на аукцион после покупки? </p>
+                <button class="container12__btn">
+                    <div class="">
+                        <div class="container12__btn-plus1"></div>
+                        <div class="container12__btn-plus2"></div>
+                    </div>     
+                </button>
+            </div>
+            <div class="container12__content-lower-block">
+                <p class="container12__lower-block-txt">Да, при покупке автомобиля с повреждениями, мы подберем для него запчасти.</p>
+            </div>
+        </div>
+        <div class="container12__content-block">
+            <div class="container12__content-upper-block">
+                <p class="container12__upper-block-txt">Какие сроки оплаты после выигрыша на аукционе?</p>
+                <button class="container12__btn">
+                    <div class="">
+                        <div class="container12__btn-plus1"></div>
+                        <div class="container12__btn-plus2"></div>
+                    </div>     
+                </button>
+            </div>
+            <div class="container12__content-lower-block">
+                <p class="container12__lower-block-txt">Да, при покупке автомобиля с повреждениями, мы подберем для него запчасти.</p>
+            </div>
+        </div>
+        <div class="container12__content-block container12__last-content-block">
+            <div class="container12__content-upper-block">
+                <p class="container12__upper-block-txt">Что если я откажусь от покупки автомобиля?</p>
+                <button class="container12__btn">
+                    <div class="">
+                        <div class="container12__btn-plus1"></div>
+                        <div class="container12__btn-plus2"></div>
+                    </div>     
+                </button>
+            </div>
+            <div class="container12__content-lower-block">
+                <p class="container12__lower-block-txt">Да, при покупке автомобиля с повреждениями, мы подберем для него запчасти.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    <div class="container13">
+        <div class="container13__inner-box">
+            <div class="container13__left-box">
+                <h2 class="container13__left-title">Только телефон, и мы в деле</h2>
+                <p class="container13__left-1-txt">Специалист перезвонит Вам в течение 5 минут, в рабочее время для уточнения деталей</p>
+                <input type="text" placeholder="+7 (927) 666-52-97" class="container13__input">
+                <button class="container13__consultation application">Получить консультацию</button>
+                <div class="container13__checkbox-box">
+                    <input type="checkbox" class="container13__checkbox">
+                    <p class="container13__left-2-txt">Нажимая на кнопку вы соглашаетесь с условиями Политики конфиденциальности</p>
+                </div>
+                <h2 class="container13__left-3-txt">Связаться с нами через мессенджер</h2>
+                <div class="container13__sc-media-block">
+                    <a href="" class="container13__btn">
+                        <button>
+                            <div>
+                                <img src="./img/whatsup-2.png" alt="">
+                            </div>
+                            <p>Whatsapp</p>
+                        </button>
+                    </a>
+                    <a href="" class="container13__btn">
+                        <button>
+                            <div>
+                                <img src="./img/telegram-2.png" alt="">
+                            </div>
+                            <p>Telegram</p>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="container13__right-box">
+                <h2 class="container13__right-title">Точный расчет стоимости уже через 1 час</h2>
+                <div class="container13__right-in-block">
+                    <div>
+                        <div class="container13__right-icon">
+                            <img src="./img/tick.png" alt="">
+                        </div>
+                   </div>
+                    <p class="container13__right-txt">Расскажем какие автомобили вы можете купить с наибольшей выгодой.</p>
+                </div>
+                <div class="container13__right-in-block">
+                    <div>
+                        <div class="container13__right-icon">
+                            <img src="./img/tick.png" alt="">
+                        </div>
+                   </div>
+                    <p class="container13__right-txt">Отправим подобранные автомобили на ваш WatsApp или Telegram</p>
+                </div>
+                <div class="container13__right-in-block">
+                   <div>
+                        <div class="container13__right-icon">
+                            <img src="./img/tick.png" alt="">
+                        </div>
+                   </div>
+                    <p class="container13__right-txt">Сделаем точный расчет стоимости автомобиля 
+                        с доставкой в ваш город “под ключ”</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contacts" class="footer">
+   <div class="footer__inner">
+    <h2 class="footer__title title">Наши контакты</h2>
+    <div class="footer__block">
+        <div class="block-1st__block block__block f1">
+            <p class="block-1st__description description">Адрес:</p>
+            <p class="block-1st__inner-description description">428000, г. Чебоксары, <br class="br"> Марпосадское шоссе, 14.</p>
+        </div>
+        <div class="block-2nd__block block__block f2">
+            <p class="block-1st__description description">Время работы:</p>
+            <p class="block-1st__inner-description description">Ежедневно 10:00 до 19:00</p>
+        </div>
+        <div class="block-3rd__block block__block f3">
+            <p class="block-1st__description description">Телефон:</p>
+            <p class="block-1st__inner-description description">8 927 997 12 42<br>8 927 997 12 42</p>
+        </div>
+    </div>
+        <div class="footer__block footer__block_2 f4">
+            <div class="block-2nd__block block__block">
+                <p class="block-1st__description description">E-mail:</p>
+                <p href="" class="block-1st__inner-description description">carmark21@auto.ru</p>
+            </div>
+            <div class="block-2nd__block_1 block__block f5">
+                <p class="block-1st__description description">Соц. сети:</p>
+                <div class="block-2nd__sc-icons">
+                    <a href="" class="footer__icon">
+                        <img src="../img/red__telegram.png" alt="">
+                    </a>
+                    <a href="" class="footer__icon">
+                        <img src="../static/img/red__whatsup.png" alt="">
+                    </a>
+                    <a href="" class="footer__icon">
+                        <img src="../img/red__youTube.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.6418220920327!2d69.24590917595353!3d41.31665497130901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b40d847941d%3A0x5765a18b352df71e!2sTashkent%20City%20Park!5e0!3m2!1sru!2s!4v1688775336359!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen=""  referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="footer__links">
+            <a href="" class="footer__link">Реквизиты</a>
+            <a href="" class="footer__link">Политика конфиденциальности </a>
+        </div>
+   </div>
+</footer>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="{{url_for('static', filename='js/main.js')}}"></script>
+<script src="{{url_for('static', filename='js/scripts.min.js')}}"></script>
+
+</html>

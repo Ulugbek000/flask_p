@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="{{url_for('static', filename='css/style.min.css')}}">
+
+<!-- We have your car {{s}} about {{d}} -->
+
+
+
+
+{% for k in data %}
+    <!-- User Input: {{ s }}<br> -->
+    <!-- Matched Name: {{ k.name }}<br>
+    Matched Description: {{ k.description }}<br><br>
+    List it self: {{k}} -->
+    <div class="swiper-wrapper container4__swiper-wrapper">
+
+        <div class="swiper-slide container4__slide container4__slide1">
+            <div class="slide__img" style="width: 130px;">
+                <img src="{{url_for('static', filename='img/slider__1st-img.png')}}" alt="">
+            </div>
+            <h2 class="slide__title title">{{k.name|title}}</h2>
+        
+            <div class="slide__txt-block">
+                <p class="slide__txt">Description</p>
+                <div class="slide__dashed-line dashed4"></div>
+                <p class="slide__b-txt">{{k.description}}</p>
+            </div>
+        
+            <button class="slider__application application">Оставить заявку</button>
+        </div>
+    </div>
+{% endfor %}
+
+
